@@ -3,3 +3,5 @@ public/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+.vercel

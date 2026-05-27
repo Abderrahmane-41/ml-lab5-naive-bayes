@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #030712;
+  color: #f8fafc;
+}
+
+.hero-viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#hero-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(3, 7, 18, 0.85) 0%,
+    rgba(3, 7, 18, 0.25) 45%,
+    transparent 70%
+  );
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #67e8f9;
+}
+
+.hero-overlay h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #f8fafc 0%, #a5b4fc 45%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  max-width: 14ch;
+}
+
+.hero-subtitle {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  opacity: 0.85;
+  max-width: 28ch;
+}
+
+.scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.scroll-hint span {
+  display: block;
+  width: 1px;
+  height: 2rem;
+  background: linear-gradient(to bottom, transparent, #22d3ee);
+  animation: scrollPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.scroll-driver {
+  position: relative;
+  z-index: 0;
+  height: 250vh;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .hero-overlay {
+    padding-bottom: 2rem;
+  }
+
+  .scroll-hint {
+    margin-top: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-hint span {
+    animation: none;
+    opacity: 0.5;
+  }
+}
