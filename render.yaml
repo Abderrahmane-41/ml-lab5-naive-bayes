@@ -1,0 +1,15 @@
+services:
+  - type: cron
+    name: lab5-naive-bayes-notebook
+    env: python
+    plan: starter
+    schedule: "0 3 * * *"
+    buildCommand: pip install --upgrade pip && pip install numpy pandas scipy scikit-learn matplotlib jupyter nbconvert
+    startCommand: jupyter nbconvert --to notebook --execute Lab5__Naive_Bayes.ipynb --output executed.ipynb
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.13
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: MPLBACKEND
+        value: Agg
