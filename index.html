@@ -3,17 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ML Lab 5 — Space Robot</title>
+  <meta name="description" content="BAATCHIA Abderrahmane — AI & Machine Learning portfolio" />
+  <title>BAATCHIA Abderrahmane | AI Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="preload" href="assets/hero-space.png" as="image" />
-  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-  <div class="hero-viewport" aria-hidden="false">
-    <canvas id="hero-canvas"></canvas>
+  <header class="glass-nav">
+    <a class="nav-brand" href="#">BA<span>·</span>AI</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-github" href="https://github.com/Abderrahmane-41" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+  </header>
+
+  <div class="hero-viewport" style="--hero-opacity: 1">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div id="hero-loader" class="hero-loader" aria-live="polite">
+      <div class="hero-loader-ring"></div>
+      <p class="hero-loader-text">Initializing humanoid systems…</p>
+    </div>
     <div class="hero-overlay">
-      <p class="hero-eyebrow">Machine Learning · Lab 5</p>
-      <h1>Naive Bayes</h1>
-      <p class="hero-subtitle">Scroll to rotate the explorer</p>
+      <p class="hero-eyebrow">Portfolio · Machine Learning</p>
+      <h1 data-bind="name">BAATCHIA Abderrahmane</h1>
+      <p class="hero-subtitle" data-bind="title">AI &amp; Machine Learning Engineering Student</p>
+      <p class="hero-tagline">Scroll to inspect the explorer, then explore projects below.</p>
       <div class="scroll-hint" aria-hidden="true">
         <span></span>
         Scroll
@@ -22,6 +42,47 @@
   </div>
 
   <section class="scroll-driver" aria-hidden="true"></section>
+
+  <main id="portfolio" class="portfolio">
+    <section id="about" class="section reveal">
+      <div class="section-header">
+        <p class="section-kicker">01 — About</p>
+        <h2>Engineering intelligence with rigor</h2>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-header">
+        <p class="section-kicker">02 — Projects</p>
+        <h2>Selected work &amp; labs</h2>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="section-header">
+        <p class="section-kicker">03 — Skills</p>
+        <h2>Tools &amp; domains</h2>
+      </div>
+    </section>
+
+    <section id="education" class="section reveal">
+      <div class="section-header">
+        <p class="section-kicker">04 — Education</p>
+        <h2>Academic foundation</h2>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-header">
+        <p class="section-kicker">05 — Contact</p>
+        <h2>Let&apos;s connect</h2>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-bind="name">BAATCHIA Abderrahmane</span> · AI Portfolio</p>
+    </footer>
+  </main>
 
   <script type="importmap">
     {
@@ -32,5 +93,6 @@
     }
   </script>
   <script type="module" src="hero.js"></script>
+  <script type="module" src="portfolio.js"></script>
 </body>
 </html>

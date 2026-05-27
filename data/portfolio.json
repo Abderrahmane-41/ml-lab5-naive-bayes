@@ -1,0 +1,68 @@
+{
+  "name": "BAATCHIA Abderrahmane",
+  "title": "AI & Machine Learning Engineering Student",
+  "tagline": "Building intelligent systems from data to deployment.",
+  "bio": "I am an AI and machine learning student focused on turning theory into working systems — from classical models to modern deep learning pipelines. I enjoy rigorous experimentation, clean notebooks, and shipping projects that are easy to understand and reproduce.",
+  "location": "Morocco",
+  "stats": [
+    { "value": "4+", "label": "ML projects" },
+    { "value": "Python", "label": "Primary stack" },
+    { "value": "S2", "label": "ML coursework" }
+  ],
+  "skills": {
+    "Languages & Tools": ["Python", "NumPy", "Pandas", "Jupyter", "Git", "Matplotlib", "scikit-learn"],
+    "ML & AI": ["Classification", "Naive Bayes", "Feature engineering", "Model evaluation", "Deep Learning (learning)", "NLP basics"],
+    "Deployment": ["Vercel", "Static sites", "GitHub Actions", "Notebook export"]
+  },
+  "projects": [
+    {
+      "title": "Lab 5 — Naive Bayes Classifier",
+      "description": "End-to-end probabilistic classification lab with data preprocessing, model training, evaluation metrics, and visual analysis in Jupyter.",
+      "tags": ["Classification", "Jupyter", "scikit-learn"],
+      "status": "Featured",
+      "links": {
+        "github": "https://github.com/Abderrahmane-41/ml-lab5-naive-bayes",
+        "live": "https://ml-lab5-naive-bayes.vercel.app"
+      },
+      "featured": true
+    },
+    {
+      "title": "Sentiment Analysis Pipeline",
+      "description": "Text preprocessing, TF-IDF features, and baseline classifiers for social/text sentiment — academic project in progress.",
+      "tags": ["NLP", "TF-IDF", "Python"],
+      "status": "In progress",
+      "links": { "github": "#" },
+      "featured": false
+    },
+    {
+      "title": "Image Classifier (Transfer Learning)",
+      "description": "CNN fine-tuning experiment on a custom image dataset with augmentation and confusion-matrix analysis.",
+      "tags": ["Computer Vision", "CNN", "TensorFlow"],
+      "status": "Academic",
+      "links": { "github": "#" },
+      "featured": false
+    },
+    {
+      "title": "Time-Series Forecasting",
+      "description": "Regression and smoothing models for sequential data with train/test splits and error visualization.",
+      "tags": ["Regression", "Time series", "Pandas"],
+      "status": "Academic",
+      "links": { "github": "#" },
+      "featured": false
+    }
+  ],
+  "education": {
+    "program": "Engineering / Computer Science — Machine Learning track",
+    "details": [
+      "Coursework: probability, linear algebra, statistics, supervised learning",
+      "Hands-on labs: classification, clustering, model validation",
+      "Focus: reproducible ML workflows and clear reporting"
+    ]
+  },
+  "contact": {
+    "github": "https://github.com/Abderrahmane-41",
+    "repo": "https://github.com/Abderrahmane-41/ml-lab5-naive-bayes",
+    "email": "contact@example.com",
+    "cv": "#"
+  }
+}
