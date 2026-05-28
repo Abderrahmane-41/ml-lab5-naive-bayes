@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import {
   Environment,
   Float,
-  Html,
   Scroll,
   ScrollControls,
   Text,
